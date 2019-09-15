@@ -1,57 +1,45 @@
-import java.io.PrintWriter;
-import java.lang.Thread.State;
-import java.util.Scanner;
-import java.util.Set;
+package perfectnumber;
+
+
+
+import java.util.*;
+
 
 public class PerfectNumber {
-	public static String detect(int n) {
-
-		int summa = 0;
-		for (int i = 1; i < n; i++) {
-			if (n % i == 0)
-				summa += i;
-		}
-		if (summa == n)
-			return "perfect";
-		else {
-			if (summa < n) {
-				return "deficient";
-			} else {
-				return "abundant";
+	
+	public static int method1(int Number ) {
+	  int Sum = 0;
+		for(int i = 1 ; i < Number ; i++) {
+			if(Number % i == 0)  {
+				Sum = Sum + i;
+			}	
+		}			
+		return Sum;
+	}
+		public static int method2(int Sum,int Number) {
+			if (Sum == Number) {
+				System.out.println(Number + " is a Perfect Number");
 			}
-		}
-	}
-
-	public static Set<Integer> divisors(int n) {
-		return null;
-	}
-
-	public static State process(int n) {
-		return null;
-	}
-
-	public static void main(String[] args) {
-
-		int a;
-		System.out.println("Elvis Strauts");
-		System.out.println(" ");
-		while (true) {
-			System.out.print("Enter number: ");
-
-			Scanner scn = new Scanner(System.in);
-			PrintWriter out = new PrintWriter(System.out);
-			try {
-				a = scn.nextInt();
-				if (a < 0) {
-					out.println("error, a<0");
-				} else {
-					out.println("This number is " + detect(a));
-				}
-			} catch (Exception e) {
-				out.println("input-output error");
+			else if (Sum < Number) {
+				System.out.println(Number +" is deficient Number");
 			}
-
-			out.flush();
+			else if (Sum > Number) {
+				System.out.println(Number +" is abundant Number");
+			}
+			  return 0;
 		}
+				
+
+    public static void main(String[] args) {
+        System.out.println("Elvis Strauts 2.g 171rdb062");
+        System.out.print("Enter A Number: ");
+        Scanner sc = new Scanner(System.in);
+        int Number = sc.nextInt(); 
+
+        method2(method1(Number),Number);
+        
+     
 	}
+
+ 
 }
