@@ -33,7 +33,7 @@ public class PerfectNumber {
 	public static void main(String[] args) {
 
 		int a;
-		System.out.println("Aleksandrs Olehnovics");
+		System.out.println("Elvis Strauts");
 		System.out.println(" ");
 		while (true) {
 			System.out.print("Enter number: ");
